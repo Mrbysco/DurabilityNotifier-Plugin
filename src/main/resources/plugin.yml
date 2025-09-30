@@ -1,0 +1,7 @@
+name: DurabilityNotifier
+version: '${version}'
+main: com.mrbysco.durabilitynotifier.DurabilityNotifierPlugin
+api-version: 1.21
+author: "Mrbysco"
+description: "A plugin that notifies players when their durability gets at a certain percentage"
+website: "https://www.curseforge.com/minecraft/bukkit-plugins/durability-notifier-plugin"
