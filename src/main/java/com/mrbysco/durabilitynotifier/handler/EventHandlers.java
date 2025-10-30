@@ -41,7 +41,6 @@ public class EventHandlers implements Listener {
 		Material itemMaterial = stack.getType();
 		int maxDurability = itemMaterial.getMaxDurability();
 		ItemMeta itemMeta = stack.getItemMeta();
-		DurabilityNotifierPlugin.LOGGER.warn("{}", stack);
 		if (!stack.isEmpty() && itemMeta instanceof Damageable damageable && maxDurability != 0) {
 			if (((double) damageable.getDamage() / maxDurability) > checkNumber) {
 				if (DurabilityNotifierPlugin.sendMessage) {
