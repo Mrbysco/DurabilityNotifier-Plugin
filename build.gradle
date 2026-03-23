@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id("xyz.jpenilla.run-paper") version "3.0.0"
+    id("xyz.jpenilla.run-paper") version "3.0.2"
 }
 
 group = 'com.mrbysco'
@@ -32,6 +32,7 @@ tasks {
     }
     runServer {
         minecraftVersion("${mc_version}")
+        jvmArgs("-Xms2G", "-Xmx2G")
     }
 }
 
@@ -39,7 +40,7 @@ processResources {
     def props = [version: version]
     getInputs().properties(props)
     filteringCharset("UTF-8")
-    filesMatching("plugin.yml") {
+    filesMatching(["plugin.yml", "paper-plugin.yml"]) {
         expand(props)
     }
 }
