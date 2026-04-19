@@ -11,8 +11,8 @@ base {
 description = "A paper plugin that allows clients to use Armor Poser to pose armor stands"
 
 java {
-    // Configure the java toolchain. This allows gradle to auto-provision JDK 21 on systems that only have JDK 11 installed for example.
-    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    // Configure the java toolchain. This allows gradle to auto-provision JDK 25 on systems that only have JDK 11 installed for example.
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
 }
 
 repositories {
@@ -28,7 +28,7 @@ dependencies {
 
 tasks {
     compileJava {
-        options.release = 21
+        options.release = 25
     }
     runServer {
         minecraftVersion("${mc_version}")
